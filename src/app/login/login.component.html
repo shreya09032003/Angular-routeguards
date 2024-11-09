@@ -1,0 +1,35 @@
+<div class="max-w-md mx-auto mt-12 bg-white p-8 rounded-lg shadow-lg">
+    <h3 class="text-3xl font-semibold text-center text-blue-600 mb-6">Login here</h3>
+    
+    <table class="w-full table-auto">
+      <tr class="mb-4">
+        <td class="text-lg text-gray-600 p-2">
+          <label for="userid" class="block text-sm font-medium">User ID</label>
+        </td>
+        <td class="p-2">
+          <input type="text" id="userid" #txtuserid class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Enter User ID">
+        </td>
+      </tr>
+      <tr class="mb-6">
+        <td class="text-lg text-gray-600 p-2">
+          <label for="password" class="block text-sm font-medium">Password</label>
+        </td>
+        <td class="p-2">
+          <input type="password" id="password" #txtpassword class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Enter Password">
+        </td>
+      </tr>
+      <tr>
+        <td class="p-2">
+          <button (click)="login(txtuserid.value, txtpassword.value)" class="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">Login</button>
+        </td>
+        <td class="p-2">
+          <button class="w-full py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-600">Cancel</button>
+        </td>
+      </tr>
+    </table>
+  
+    <div class="absolute bottom-4 right-4 text-sm text-gray-500">
+      <p> The correct User ID and Password are "admin".</p>
+    </div>
+  </div>
+  

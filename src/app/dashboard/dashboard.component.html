@@ -1,0 +1,16 @@
+<h2 class="text-4xl font-bold text-blue-600 text-center">Homepage</h2>
+<div class="text-left p-10 bg-white rounded-lg shadow-lg max-w-4xl mx-auto">
+  
+    <div class="mt-8 text-lg text-gray-700 leading-relaxed">
+      <p class="mt-4 text-xl font-semibold text-gray-800">
+        In this application, I have set up the following scenarios using <strong>CanActivate</strong> and <strong>CanDeactivate</strong>:
+      </p>
+  
+      <ul class="list-disc list-inside mt-6 space-y-4">
+        <li class="text-lg text-gray-600">When attempting to navigate to the <strong>Contact Us</strong> page, users must be logged in (with valid credentials) to access it.</li>
+        <li class="text-lg text-gray-600">If the user has not logged in and tries to access the page, they are redirected to the <strong>login page</strong>.</li>
+        <li class="text-lg text-gray-600">If the user is in the middle of filling out the contact form and tries to navigate away, the <strong>CanDeactivate</strong> guard will prevent them from leaving without confirmation, ensuring no data is lost.</li>
+      </ul>
+    </div>
+  </div>
+  

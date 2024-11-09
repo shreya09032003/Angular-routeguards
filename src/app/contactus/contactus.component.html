@@ -1,0 +1,72 @@
+<div class="text-left max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
+    <h2 class="text-3xl font-semibold text-center text-blue-600 mb-8">Contact Form</h2>
+
+    <form>
+      <div class="mb-6">
+        <label for="name" class="block text-lg font-medium text-gray-500">Your Name</label>
+        <input 
+          type="text" 
+          id="name"
+          [(ngModel)]="formData.name" 
+          name="name"
+          required 
+          (input)="onInputChange()"
+          class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your name"
+        />
+      </div>
+      <div class="mb-6">
+        <label for="email" class="block text-lg font-medium text-gray-500">Your Email</label>
+        <input 
+          type="email" 
+          id="email"
+          [(ngModel)]="formData.email" 
+          name="email"
+          required 
+          (input)="onInputChange()"
+          class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your email"
+        />
+      </div>
+      <div class="mb-6">
+        <label for="phone" class="block text-lg font-medium text-gray-500">Your Mobile No</label>
+        <input 
+          type="text" 
+          id="phone"
+          [(ngModel)]="formData.phone" 
+          name="phone"
+          required 
+          (input)="onInputChange()"
+          class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your mobile number"
+        />
+      </div>
+      <div class="mb-6">
+        <label for="message" class="block text-lg font-medium text-gray-500">Your Message</label>
+        <textarea 
+          id="message"
+          [(ngModel)]="formData.message" 
+          name="message"
+          required 
+          (input)="onInputChange()"
+          class="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Enter your message"
+        ></textarea>
+      </div>
+      <div class="flex justify-between gap-4">
+        <button 
+          [disabled]="!isFormComplete()" 
+          (click)="onSend()" 
+          class="w-1/2 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-400 transition"
+        >
+          Send
+        </button>
+        <!-- <button 
+          (click)="onCancel()" 
+          class="w-1/2 py-3 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-600 transition"
+        >
+          Cancel
+        </button> -->
+      </div>
+    </form>
+</div>
